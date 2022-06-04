@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8">
+        <title>Web 2.0 Technlolgien</title>
+        <style>
+            body{
+                counter-reset: list;
+                
+            }
+            ol {
+                list-style-type: none;
+            }
+            .chapters{
+                counter-reset: sublist;
+            }
+            .books > li::before{
+                counter-increment: list;
+                content: counter(list)":";
+            }
+            .chapters > li::before{
+                counter-increment: sublist;
+                content: counter(list)"."counter(sublist);
+            }
+           </style>           
+    </head>
+    <body>
+        <ol class=books>
+            <li>
+            <li>
+           <ol class=chapters>
+            <li>
+            <li>
+           </ol>
+            <li>
+            <li>
+           <ol class=chapters>
+            <li>
+            <li>
+           </ol>
+           </ol>
+    <br>
+    <p> Hier der nötige Sytle-Code:<br>
+    <pre><code>
+        body{
+            counter-reset: list;
+            
+        }
+        ol {
+            list-style-type: none;
+        }
+        .chapters{
+            counter-reset: sublist;
+        }
+        .books > li::before{
+            counter-increment: list;
+            content: counter(list)":";
+        }
+        .chapters > li::before{
+            counter-increment: sublist;
+            content: counter(list)"."counter(sublist);
+        }
+    </code></pre></p>
+    </body>
+</html>
